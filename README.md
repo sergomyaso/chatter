@@ -1,8 +1,9 @@
 # Chatter
-> Simple chat on java
+> Simple chat on java 
 
-[![Java Version][java-image]][java-url]
-[![Gradle Version][gradle-image]][gradle-url]
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
 One to two paragraph statement about your product and what it does.
 
