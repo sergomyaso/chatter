@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <meta charset="UTF-8">
+    <title>Chatter - sign up</title>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign up </h2>
+        <!-- Register Form -->
+        <form th:action="@{/registration}" th:object="${userForm}" method="POST">
+            <div>
+                <input type="text" th:field="*{username}" placeholder="Username"/>
+                <input type="password" th:field="*{password}" placeholder="Password"/>
+                <input type="password" th:field="*{passwordConfirm}" placeholder="Confirm your Password"/>
+            </div>
+            <input type="submit"></input>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
