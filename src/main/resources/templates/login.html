@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <meta charset="UTF-8">
+    <title>Chatter - sign in</title>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> Sign In </h2>
+        <!-- Login Form -->
+        <form method="post">
+            <div>
+                <input name="username" type="text" placeholder="Username"
+                       autofocus="true"/>
+                <input name="password" type="password" placeholder="Password"/>
+                <h4><a href="/registration">Зарегистрироваться</a></h4>
+            </div>
+            <input type="submit"></input>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
