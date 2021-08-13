@@ -28,21 +28,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-                //Access only for non-registered users
                 .antMatchers("/registration").not().fullyAuthenticated()
-                //Access only for users with the Administrator role
                 .antMatchers("/admin/**").hasRole(Role.ROLE_ADMIN_TITLE)
-                .antMatchers("/chat").hasRole(Role.ROLE_USER_TITLE)
-                .antMatchers("/username").hasRole(Role.ROLE_USER_TITLE)
-                //Access is allowed to all users
-                //.antMatchers("/", "/resources/**").permitAll()
-                //All other pages require authentication
-                //.anyRequest().authenticated()
+                .antMatchers("/chat", "/username").hasRole(Role.ROLE_USER_TITLE)
                 .and()
-                //Setting up for logging in
                 .formLogin()
                 .loginPage("/login")
-                //Redirecting to the main page after a successful login
                 .defaultSuccessUrl("/")
                 .permitAll()
                 .and()
